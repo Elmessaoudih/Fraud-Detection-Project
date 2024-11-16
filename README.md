@@ -121,4 +121,3 @@ The application will run on `http://127.0.0.1:5000`.
 Enjoy exploring machine learning workflows with this project! 😊
 ```
 
-This streamlined version keeps it beginner-friendly and concise for GitHub. Let me know if you'd like any changes!
