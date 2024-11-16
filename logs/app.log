@@ -1,0 +1,19 @@
+2024-11-15 05:36:50,910 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-11-15 05:36:50,911 - [33mPress CTRL+C to quit[0m
+2024-11-15 05:36:50,912 -  * Restarting with stat
+2024-11-15 05:36:52,029 -  * Debugger is active!
+2024-11-15 05:36:52,032 -  * Debugger PIN: 109-187-403
+2024-11-15 05:37:54,670 - 127.0.0.1 - - [15/Nov/2024 05:37:54] "GET / HTTP/1.1" 200 -
+2024-11-15 05:37:57,557 - Error during prediction: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+2024-11-15 05:37:57,557 - 127.0.0.1 - - [15/Nov/2024 05:37:57] "[31m[1mPOST /predict HTTP/1.1[0m" 400 -
+2024-11-15 05:38:10,255 - 127.0.0.1 - - [15/Nov/2024 05:38:10] "GET /train HTTP/1.1" 200 -
+2024-11-15 05:38:13,534 - Model retrained successfully.
+2024-11-15 05:38:13,535 - 127.0.0.1 - - [15/Nov/2024 05:38:13] "POST /train HTTP/1.1" 200 -
+2024-11-15 05:38:14,972 - Model retrained successfully.
+2024-11-15 05:38:14,972 - 127.0.0.1 - - [15/Nov/2024 05:38:14] "POST /train HTTP/1.1" 200 -
+2024-11-15 05:38:19,225 - 127.0.0.1 - - [15/Nov/2024 05:38:19] "GET / HTTP/1.1" 200 -
+2024-11-15 05:38:21,406 - Error during prediction: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+2024-11-15 05:38:21,406 - 127.0.0.1 - - [15/Nov/2024 05:38:21] "[31m[1mPOST /predict HTTP/1.1[0m" 400 -
+2024-11-15 05:40:01,624 -  * Detected change in 'C:\\Users\\hamid\\OneDrive\\Desktop\\fraud_detection_flask\\app.py', reloading
+2024-11-15 05:40:01,768 -  * Restarting with stat

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Train Model</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Train the Model</h1>
+        <form action="{{ url_for('train') }}" method="POST" enctype="multipart/form-data">
+            <label for="file">Select Preprocessed File:</label>
+            <input type="file" id="file" name="file" required>
+            <label for="target_column">Target Column:</label>
+            <select name="target_column" id="target_column"></select>
+            <button type="submit">Train Model</button>
+        </form>
+        <a href="{{ url_for('index') }}" class="back-button">Back to Home</a>
+    </div>
+    <script>
+        const fileInput = document.getElementById("file");
+        const targetColumnDropdown = document.getElementById("target_column");
+
+        fileInput.addEventListener("change", () => {
+            const file = fileInput.files[0];
+            const formData = new FormData();
+            formData.append("file", file);
+
+            fetch("{{ url_for('get_columns') }}", {
+                method: "POST",
+                body: formData,
+            })
+                .then(response => response.json())
+                .then(data => {
+                    targetColumnDropdown.innerHTML = '';
+                    data.columns.forEach(col => {
+                        const option = document.createElement("option");
+                        option.value = col;
+                        option.textContent = col;
+                        targetColumnDropdown.appendChild(option);
+                    });
+                })
+                .catch(error => console.error("Error fetching columns:", error));
+        });
+    </script>
+</body>
+</html>
